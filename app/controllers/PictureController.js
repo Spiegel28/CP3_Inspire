@@ -8,10 +8,15 @@ import { setHTML } from "../utils/Writer.js";
 
 function _drawBackgroundImage() {
     const backgroundImage1 = AppState.backgroundImage1
+    
+    
+    if (backgroundImage1){
 
     document.body.style.backgroundImage = `url(${backgroundImage1.imgUrl})`
-
+    
     setHTML('imageInfo', backgroundImage1.InfoCardHTMLTemplate)
+    }
+
 }
 
 
@@ -19,9 +24,9 @@ export class PictureController {
     constructor() {
         console.log('PictureController Loaded');
 
-        AppState.on('backgroundImage1', _drawBackgroundImage)
-        
-        this.getRandomImage()
+        AppState.on('backgroundImage1', _drawBackgroundImage);
+
+        this.getRandomImage();
     }
     async getRandomImage() {
         try {

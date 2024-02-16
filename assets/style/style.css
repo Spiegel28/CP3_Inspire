@@ -1,1 +1,11 @@
 /* BASIC STYLES HERE */
+body {
+    background-size: cover;
+    background-position: center;
+  }
+  
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
