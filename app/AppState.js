@@ -12,7 +12,7 @@ class ObservableAppState extends EventEmitter {
    * @type {BackgroundImage | null}
    */
   // NOTE this will not be an array of data coming, so we do not set up an array placeholder.
-  backgroundImage = null
+  backgroundImage1 = null
 }
 
 export const AppState = createObservableProxy(new ObservableAppState())

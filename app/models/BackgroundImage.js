@@ -1,4 +1,4 @@
-export class BackgroundImage {
+export class backgroundImage1 {
 constructor (data) {
     this.id = data.id
     this.imgUrl = data.imgUrl
@@ -20,7 +20,7 @@ get InfoCardHTMLTemplate() {
     </div>
     `
 }
-
+}
 
 // author
 // : 
