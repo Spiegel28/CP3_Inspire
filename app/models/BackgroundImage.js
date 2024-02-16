@@ -1,11 +1,13 @@
 export class backgroundImage1 {
-constructor (data) {
-    this.id = data.id
-    this.imgUrl = data.imgUrl
-    this.author = data.author 
-}
-
-get InfoCardHTMLTemplate() {
+    
+    
+    constructor (data) {
+        this.id = data.id
+        this.imgUrl = data.imgUrl
+        this.author = data.author 
+    }
+    
+    get InfoCardHTMLTemplate(){
     return `
     <div class="info-card">
       <div class="hidden-details">
