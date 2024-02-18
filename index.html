@@ -18,20 +18,13 @@
 <body>
   <!-- SECTION -->
   <header>
-    <nav class="navbar navbar-dark navbar-expand bg-dark text-light px-2">
-      <a class="navbar-brand" href="#">
-        <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
-          loading="lazy">
-        <span class="ml-2">CP3_Inspire</span>
-      </a>
+    <nav class="navbar navbar-expand bg-transparent text-light px-2">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <!-- NAVLINKS -->
-          <a href="#/about" class="nav-link">About</a>
         </div>
       </div>
       <div class="flex-grow-1 justify-content-end align-items-center d-flex" id="authstate"></div>
@@ -40,20 +33,39 @@
 
   <!-- SECTION -->
   <main>
-  <div class="container-fluid">
-    <div class="row">
-    <section id="imageInfo">
-      Hello
-    </section>
-    </div>
+    <div class="container text-center">
+      <div class="row">
+          <div class="col">
+              <h1 id="'' class="mt-5">
+                TIme here   
+                <!-- Time will be dynamically added using JavaScript -->
+              </h1>
+          </div>
+      </div>
+  </div>
+
+  <div class="container-fluid position-absolute top-0 end-0 mt-3 mr-3">
+      <div id="weather" class="text-right">
+        Weather here   
+        <!-- Weather will be dynamically added using JavaScript -->
+      </div>
+  </div>
+
+  <div class="container text-center">
+      <div class="row">
+          <div class="col">
+              <p id="" class="mt-5">
+                  Quote here
+                <!-- Quote will be dynamically added using JavaScript -->
+              </p>
+          </div>
+      </div>
   </div>
   </main>
 
   <!-- SECTION -->
   <footer class="bg-dark text-light">
-    <div class="text-center no-select">
-      <p class="mb-0"><small>Made with 💖 by CodeWorks</small></p>
-    </div>
+    
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

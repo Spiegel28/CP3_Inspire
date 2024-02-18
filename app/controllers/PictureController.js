@@ -14,7 +14,7 @@ function _drawBackgroundImage() {
 
     document.body.style.backgroundImage = `url(${backgroundImage1.imgUrl})`
     
-    setHTML('imageInfo', backgroundImage1.InfoCardHTMLTemplate)
+    // setHTML('imageInfo', backgroundImage1.InfoCardHTMLTemplate)
     }
 
 }

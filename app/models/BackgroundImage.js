@@ -9,17 +9,17 @@ export class backgroundImage1 {
     
     get InfoCardHTMLTemplate(){
     return `
-    <div class="info-card">
-      <div class="hidden-details">
-        <h2>
-        <span>By ${this.author.name}</span>
-        <a title="Go see ${this.author.first_name}'s profile on unsplash" href="${this.author.links.html}" target="_blank">
-        <i class="mdi mdi-account-circle text-light"></i>
-        </a>
-        </h2>
-        <button onclick="app.SandboxImagesController.createImage()" class="btn btn-outline-light px-3">Save</button>
-      </div>
-    </div>
+    // <div class="info-card">
+    //   <div class="hidden-details">
+    //     <h2>
+    //     <span>By ${this.author.name}</span>
+    //     <a title="Go see ${this.author.first_name}'s profile on unsplash" href="${this.author.links.html}" target="_blank">
+    //     <i class="mdi mdi-account-circle text-light"></i>
+    //     </a>
+    //     </h2>
+    //     <button onclick="app.SandboxImagesController.createImage()" class="btn btn-outline-light px-3">Save</button>
+    //   </div>
+    // </div>
     `
 }
 }
