@@ -9,7 +9,7 @@ async getQuotes() {
     console.log ('got quotes', response.data)
 
     const newQuote = new Quote()
-    console.log('new image',newQuote)
+    console.log('new quote',newQuote)
     AppState.Quote = newQuote
 }
 }

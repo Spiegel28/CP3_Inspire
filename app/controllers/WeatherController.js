@@ -7,7 +7,7 @@ function _drawWeather() {
     const weather = AppState.weather;
     if (weather) {
         let htmlString = weather.WeatherTemplate; // Use the WeatherTemplate property of the weather object
-        setHTML('Weather', htmlString);
+        setHTML('weather', htmlString);
     }
 }
 
