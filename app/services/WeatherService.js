@@ -1,3 +1,5 @@
+import { AppState } from "../AppState.js"
+import { Weather } from "../models/Weather.js"
 import { api } from "./AxiosService.js"
 
 class WeatherService {
@@ -7,7 +9,13 @@ class WeatherService {
 
         console.log('got weather', response.data)
 
+        const newWeather = new Weather(response.data)
+
+        console.log('new image', newWeather)
+
+        AppState.weather = newWeather
     }
+
 }
 
 
