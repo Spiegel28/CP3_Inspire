@@ -18,6 +18,8 @@ export class QuoteController {
 constructor() {
 console.log('Quotes controller loaded')
 this.getQuotes()
+AppState.on('Quote', _drawQuotes)
+
 }
 
 
