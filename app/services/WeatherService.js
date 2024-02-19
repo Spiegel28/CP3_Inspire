@@ -11,9 +11,9 @@ class WeatherService {
 
         const newWeather = new Weather(response.data)
 
-        console.log('new image', newWeather)
+        console.log('new weather', newWeather)
 
-        AppState.weather = newWeather
+        AppState.Weather = newWeather
     }
 
 }

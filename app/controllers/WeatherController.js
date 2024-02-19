@@ -4,7 +4,7 @@ import { Pop } from "../utils/Pop.js"
 import { setHTML } from "../utils/Writer.js"
 
 function _drawWeather() {
-    const weather = AppState.weather;
+    const weather = AppState.Weather;
     if (weather) {
         let htmlString = weather.WeatherTemplate; // Use the WeatherTemplate property of the weather object
         setHTML('weather', htmlString);
