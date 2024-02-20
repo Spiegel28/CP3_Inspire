@@ -61,6 +61,26 @@
           </div>
       </div>
   </div>
+  <div class="container text-center">
+      <div class="row">
+          <div class="col">
+              <p id="todoService" class="mt-5">
+                  List
+              </p>
+          </div>
+      </div>
+      <div id='todoForm' class="row">
+        <div class="col-12">
+          <form onsubmit="app.TodoController.createTodo()">
+            <div class="mb-3">
+              <label for="todoDescription">Add Todo</label>
+              <!-- NOTE textarea is just a longer text input field -->
+              <textarea id="todoDescription" name="description" class="w-100" rows="10" maxlength="500"></textarea>
+            </div>
+            <button type="submit">Submit</button>
+          </form>
+      </div>
+  </div>
   </main>
 
   <!-- SECTION -->

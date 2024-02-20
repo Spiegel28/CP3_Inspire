@@ -11,7 +11,19 @@ class TodoService {
         const newTodos = response.data.map(todoPOJO => new Todos(todoPOJO))
         console.log('mapped over', newTodos)
 
-        AppState.todo = newTodos
+        AppState.todos = newTodos
+    }
+
+    async createTodo(todoFormData) {
+    console.log('todo form data', todoFormData)
+
+    const response = await api.post('api/todos', todoFormData)
+    console.log('creating todo', response.data)
+
+    const newTodo = new Todos(response.data)
+    console.log('new todo', newTodo)
+
+    AppState.todos.push(newTodo)
     }
     }
 

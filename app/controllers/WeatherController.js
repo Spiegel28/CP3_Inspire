@@ -24,7 +24,7 @@ AppState.on('Weather', _drawWeather)
 async getWeather() {
     try {
         await weatherService.getWeather()
-        Pop.success('Got Weather')
+        // Pop.success('Got Weather')
     } catch (error) {
         console.error(error)
         Pop.error(error)

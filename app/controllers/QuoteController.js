@@ -27,7 +27,7 @@ AppState.on('Quote', _drawQuotes)
 async getQuotes() {
     try{
         await quoteService.getQuotes()
-        Pop.success('got quotes')
+        // Pop.success('got quotes')
     } catch (error) {
         console.error(error)
         Pop.error(error)
