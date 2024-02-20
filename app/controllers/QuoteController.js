@@ -4,15 +4,16 @@ import { quoteService } from "../services/QuoteService.js";
 import { Pop } from "../utils/Pop.js";
 import { setHTML } from "../utils/Writer.js";
 
-const parent = document.querySelector('.parent');
-const child = document.querySelector('.child');
-
-function showChild() {
-    child.classList.remove('hidden');
+function showAuthor(element) {
+    // Find the author element within the quote container and remove the 'hidden' class
+    const authorElement = element.querySelector('.author');
+    authorElement.classList.remove('hidden1');
 }
 
-function hideChild() {
-    child.classList.add('hidden');
+function hideAuthor(element) {
+    // Find the author element within the quote container and add the 'hidden' class
+    const authorElement = element.querySelector('.author');
+    authorElement.classList.add('hidden1');
 }
 
 
@@ -29,8 +30,6 @@ constructor() {
 console.log('Quotes controller loaded')
 this.getQuotes()
 AppState.on('Quote', _drawQuotes)
-parent.addEventListener('mouseover', showChild);
-parent.addEventListener('mouseout', hideChild);
 
 }
 

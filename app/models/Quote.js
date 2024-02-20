@@ -22,10 +22,10 @@ export class Quote {
 
     get QuoteTemplate() {
         return `
-            <div class="quote">
-                <p class="quote-text parent" onmouseover="showChild()" onmouseout="hideChild()">${this.content}</p>
+            <div class="quote" onmouseover="showAuthor(this)" onmouseout="hideAuthor(this)">
+                <p class="quote-text">${this.content}</p>
                 
-                <p class="quote-author child hidden">- ${this.author}</p>
+                <p class="quote-author author hidden1">- ${this.author}</p>
             </div>
         `;
     }
