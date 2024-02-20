@@ -8,7 +8,7 @@ async getQuotes() {
     const response = await api.get('api/quotes')
     console.log ('got quotes', response.data)
 
-    const newQuote = new Quote()
+    const newQuote = new Quote(response.data)
     console.log('new quote',newQuote)
     AppState.Quote = newQuote
 }

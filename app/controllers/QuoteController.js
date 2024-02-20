@@ -4,7 +4,20 @@ import { quoteService } from "../services/QuoteService.js";
 import { Pop } from "../utils/Pop.js";
 import { setHTML } from "../utils/Writer.js";
 
+function showAuthor(element) {
+    const author = element.querySelector('.quote-author');
+    if (author) {
+        author.style.display = 'inline'; 
+    }
+}
 
+
+function hideAuthor(element) {
+    const author = element.querySelector('.quote-author');
+    if (author) {
+        author.style.display = 'none'; 
+    }
+}
 
 function _drawQuotes() {
 const quotes = AppState.Quote
