@@ -23,8 +23,12 @@ body {
       height: 50px;
   }
 
-  .author {
+  .hidden {
     display: none;
-    font-style: italic;
+}
+
+
+.parent:hover .child {
+    display: block;
 }
   }
