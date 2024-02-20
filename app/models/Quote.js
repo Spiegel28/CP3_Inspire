@@ -24,6 +24,7 @@ export class Quote {
         return `
             <div class="quote">
                 <p class="quote-text">${this.content}</p>
+                
                 <p class="quote-author">- ${this.author}</p>
             </div>
         `;

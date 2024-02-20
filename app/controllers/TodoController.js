@@ -5,11 +5,15 @@ import { Pop } from "../utils/Pop.js";
 import { setHTML } from "../utils/Writer.js";
 
 
+
 function _drawtodoList() {
     const todos = AppState.todos
     let htmlString = ''
     todos.forEach(todo => htmlString += todo.todoListHTML)
     setHTML('todoService', htmlString)
+
+    const numTodos = todos.length;
+    document.getElementById('todoCount').textContent = numTodos.toString();
 
 }
 
@@ -23,7 +27,7 @@ AppState.on('todos', _drawtodoList)
 
     async getTodos() {
         await todoService.getTodo()
-        Pop.success('Got Todos')
+        // Pop.success('Got Todos')
     } catch (error) {
     console.error(error)
     Pop.error(error)
@@ -73,4 +77,6 @@ AppState.on('todos', _drawtodoList)
           Pop.error(error)
         }
       }
+
+      
 }
