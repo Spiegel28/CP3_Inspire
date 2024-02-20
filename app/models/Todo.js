@@ -1,26 +1,33 @@
+import { AppState } from "../AppState.js"
+
 export class Todos {
 constructor(data) {
-
+this.id = data.id
+this.creatorId = data.creatorId
+this.creator = data.creator
 }
 
 get todoListHTML() {
     return `
-    <h2>My Checklist</h2>
     <ul id="checklist">
         <li>
             <label for="item1">Item 1</label>
             <input type="checkbox" id="item1">
-        </li>
-        <li>
-            <label for="item2">Item 2</label>
-            <input type="checkbox" id="item2">
-        </li>
-        <li>
-            <label for="item3">Item 3</label>
-            <input type="checkbox" id="item3">
+            ${this.DeleteButton}
         </li>
         <!-- Add more items as needed -->
     </ul>
     `
 }
+
+
+get DeleteButton() {
+    // NOTE If we are not logged in OR if we are not the creator of this car object
+    if (AppState.account == null || this.creatorId != AppState.account.id) {
+      return ''
+    }
+
+    // NOTE shows delete button only for the creator of the car
+    return `<button onclick="app.CarsController.removeCar('${this.id}')" class="btn btn-danger">Delete Car</button>`
+  }
 }

@@ -25,6 +25,24 @@ class TodoService {
 
     AppState.todos.push(newTodo)
     }
+
+    async removeTodo(todoId) {
+        // NOTE on the delete request, we specify the id of the resource that we want to delete in the request url, following the resource type. No second argument is passed, delete requests should not have a request body
+        const response = await api.delete(`api/todos/${todoId}`)
+    
+        // NOTE the response.data in this case is just a string telling us the resource was successfully deleted. Good to log, but we won't use it on our code after this
+        console.log('📡 deleting todo', response.data);
+    
+        // NOTE the car that we want to delete is in our AppState still, so we use the id from the network request to find the index of that car and splice it out
+        const todoIndex = AppState.todos.findIndex(todo => todo.id == todoId)
+    
+        if (todoIndex == -1) {
+          throw new Error('Index was -1, you messed up the findIndex')
+        }
+    
+        // NOTE make sure we do this after the delete request was successful
+        AppState.todos.splice(todoIndex, 1)
+      }
     }
 
 
