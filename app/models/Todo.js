@@ -17,7 +17,6 @@ get todoListHTML() {
             ${this.CompletedCheckbox}
             ${this.DeleteButton}
         </li>
-        <!-- Add more items as needed -->
     </ul>
     `
 }

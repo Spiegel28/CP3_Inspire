@@ -38,7 +38,6 @@
           <div class="col">
               <h1 id='currentTime' class="mt-5">
                 TIme here   
-                <!-- Time will be dynamically added using JavaScript -->
               </h1>
           </div>
       </div>
@@ -47,7 +46,6 @@
   <div class="container-fluid position-absolute top-0 end-0 mt-3 mr-3">
       <div id="weather" class="text-right">
         Weather here   
-        <!-- Weather will be dynamically added using JavaScript -->
       </div>
   </div>
 
@@ -56,12 +54,11 @@
           <div class="col">
               <p id="quote" class="mt-5">
                   Quote here
-                <!-- Quote will be dynamically added using JavaScript -->
               </p>
           </div>
       </div>
   </div>
-  <div class="container text-center">
+  <div class="container text-center bg-dark text-white">
       <div class="row">
           <div class="col">
             <h2>My Checklist</h2>
@@ -69,20 +66,20 @@
               <p id="todoService" class="mt-5">
                   List
               </p>
+            </div>
           </div>
-      </div>
       <div id='todoForm' class="row">
         <div class="col-12">
           <form onsubmit="app.TodoController.createTodo()">
             <div class="mb-3">
               <label for="todoDescription">Add Todo</label>
-              <!-- NOTE textarea is just a longer text input field -->
               <textarea id="todoDescription" name="description" class="w-100" rows="10" maxlength="500"></textarea>
             </div>
             <button type="submit">Submit</button>
           </form>
+        </div>
       </div>
-  </div>
+    </div>
   </main>
 
   <!-- SECTION -->
