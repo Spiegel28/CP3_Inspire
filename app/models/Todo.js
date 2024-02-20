@@ -6,6 +6,7 @@ this.id = data.id
 this.creatorId = data.creatorId
 this.creator = data.creator
 this.description = data.description
+this.completed = data.completed || false
 }
 
 get todoListHTML() {
@@ -13,7 +14,7 @@ get todoListHTML() {
     <ul id="checklist">
         <li>
             <label for="item1">${this.description}</label>
-            <input type="checkbox" id="item1">
+            ${this.CompletedCheckbox}
             ${this.DeleteButton}
         </li>
         <!-- Add more items as needed -->
@@ -30,5 +31,11 @@ get DeleteButton() {
 
     // NOTE shows delete button only for the creator of the car
     return `<button onclick="app.TodoController.removeTodo('${this.id}')" class="btn btn-danger">Delete</button>`
+  }
+
+  get CompletedCheckbox() {
+    return `
+    <input onchange="app.TodoController.completeTodo('${this.id}')" ${this.completed ? 'checked' : ''} type="checkbox">
+    `
   }
 }

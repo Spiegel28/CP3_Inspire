@@ -43,6 +43,19 @@ class TodoService {
         // NOTE make sure we do this after the delete request was successful
         AppState.todos.splice(todoIndex, 1)
       }
+
+      async completeTodo(todoId) {
+        const foundTodo = AppState.todos.find(Todos => Todos.id == todoId)
+
+        const todoCompleteData = { completed: !foundTodo.completed}
+
+        console.log(todoCompleteData)
+
+        const response = await api.put(`api/todos/${todoId}`, todoCompleteData)
+
+    console.log('📡 Updated todo', response.data);
+    console.log('old object', foundTodo);
+      }
     }
 
 

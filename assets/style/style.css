@@ -24,11 +24,17 @@ body {
   }
 
   .hidden1 {
-    display: none;
-}
-
-
-.parent:hover .child {
+    opacity: 0;
     display: block;
+    transition: all 1s ease-in-out;
 }
+
+.info-card:hover .hidden1 {
+  opacity: 1;
+}
+
+
+/* .magic-date:hover+.hidden1 {
+    opacity: 1;
+} */
   }
