@@ -5,13 +5,14 @@ constructor(data) {
 this.id = data.id
 this.creatorId = data.creatorId
 this.creator = data.creator
+this.description = data.description
 }
 
 get todoListHTML() {
     return `
     <ul id="checklist">
         <li>
-            <label for="item1">Item 1</label>
+            <label for="item1">${this.description}</label>
             <input type="checkbox" id="item1">
             ${this.DeleteButton}
         </li>
@@ -28,6 +29,6 @@ get DeleteButton() {
     }
 
     // NOTE shows delete button only for the creator of the car
-    return `<button onclick="app.CarsController.removeCar('${this.id}')" class="btn btn-danger">Delete Car</button>`
+    return `<button onclick="app.TodoController.removeTodo('${this.id}')" class="btn btn-danger">Delete</button>`
   }
 }
